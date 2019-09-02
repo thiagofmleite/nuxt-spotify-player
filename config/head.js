@@ -9,7 +9,12 @@ const head = {
       content: 'Front End Challenge - Grupo XP'
     }
   ],
-  link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+    {
+      href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+    }
+  ]
 }
 
 export default head

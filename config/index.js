@@ -6,6 +6,7 @@ import plugins from './plugins'
 import buildModules from './build-modules'
 import modules from './modules'
 import axios from './axios'
+import styleResources from './style-resources'
 
 export default {
   mode,
@@ -15,5 +16,6 @@ export default {
   plugins,
   buildModules,
   modules,
-  axios
+  axios,
+  styleResources
 }
