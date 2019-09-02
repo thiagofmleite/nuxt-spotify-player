@@ -1,8 +1,75 @@
 @import 'global';
 @import './reset.css';
 
+*:focus {
+  outline: none;
+}
+
 body {
   background-color: $black;
   color: $white;
   font-family: 'Roboto', sans-serif;
+}
+
+.text-style {
+  &-title {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: left;
+    color: $gray;
+  }
+  &-subtitle {
+    font-weight: normal;
+    font-size: 24px;
+    text-align: left;
+    color: $white-2;
+  }
+
+  &-context {
+    font-weight: normal;
+    font-size: 18px;
+    text-align: left;
+    color: $white;
+
+    &-center {
+      font-weight: normal;
+      font-size: 18px;
+      text-align: center;
+      color: $white-2;
+    }
+
+    &-dark {
+      font-weight: normal;
+      font-size: 18px;
+      text-align: left;
+      color: $gray;
+    }
+
+    &-light {
+      font-weight: normal;
+      font-size: 18px;
+      text-align: left;
+      color: $white-2;
+    }
+  }
+
+  &-medium {
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    color: $white-2;
+  }
+
+  &-small {
+    &-dark {
+      font-weight: normal;
+      font-size: 14px;
+      text-align: left;
+      color: $gray;
+    }
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    color: $white-2;
+  }
 }

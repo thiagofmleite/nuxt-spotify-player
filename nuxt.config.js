@@ -8,5 +8,6 @@ export default {
   buildModules: config.buildModules,
   modules: config.modules,
   axios: config.axios,
-  build: config.build
+  build: config.build,
+  styleResources: config.styleResources
 }

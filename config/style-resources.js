@@ -1,5 +1,5 @@
 const styleResources = {
-  scss: ['~/assets/sass/_globals.scss']
+  scss: ['~/assets/sass/_global.scss']
 }
 
 export default styleResources
