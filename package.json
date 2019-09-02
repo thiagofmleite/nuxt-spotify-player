@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/thiagofmleite/nuxt-spotify-player/issues"
   },
-  "homepage": "https://github.com/thiagofmleite/nuxt-spotify-player#readme"
+  "homepage": "https://github.com/thiagofmleite/nuxt-spotify-player#readme",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.6.0",
+    "nuxt": "^2.9.2"
+  }
 }
