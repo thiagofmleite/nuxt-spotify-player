@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-spotify-player",
+  "version": "1.0.0",
+  "description": "Front End Challenge - Grupo XP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagofmleite/nuxt-spotify-player.git"
+  },
+  "author": "Thiago Leite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagofmleite/nuxt-spotify-player/issues"
+  },
+  "homepage": "https://github.com/thiagofmleite/nuxt-spotify-player#readme"
+}
