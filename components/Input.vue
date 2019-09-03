@@ -3,11 +3,33 @@
     <label class="label text-style-small" for>
       <slot />
     </label>
-    <input class="input text-style-title" type="text" placeholder="Comece a escrever..." />
+    <input
+      class="input text-style-title"
+      type="text"
+      placeholder="Comece a escrever..."
+      v-model="fieldValue"
+    />
   </div>
 </template>
 <script>
-export default {}
+export default {
+  props: {
+    readOnly: {
+      type: Boolean,
+      default: false
+    }
+  },
+  watch: {
+    fieldValue() {
+      this.$emit('input', this.fieldValue)
+    }
+  },
+  data() {
+    return {
+      fieldValue: ''
+    }
+  }
+}
 </script>
 <style lang="scss" scoped>
 .input {

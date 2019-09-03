@@ -1,18 +1,26 @@
 <template>
   <div class="album">
     <div class="cover">
-      <img src="https://i.scdn.co/image/f1cad0d6974d6236abd07a59106e8450d85cae24" alt />
+      <img :src="cover.url" :alt="album.name" />
     </div>
-    <div class="title text-style-small">{{ title}}</div>
-    <div class="artist text-style-small-dark">{{ artist }}</div>
+    <div class="title text-style-small">{{ album.name }}</div>
+    <div class="artist text-style-small-dark">{{ artist.name }}</div>
   </div>
 </template>
 <script>
 export default {
-  data() {
-    return {
-      title: 'Album',
-      artist: 'Artist'
+  props: {
+    album: {
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    artist() {
+      return this.album.artists[0]
+    },
+    cover() {
+      return this.album.images[1]
     }
   }
 }

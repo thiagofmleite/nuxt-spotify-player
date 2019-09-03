@@ -4,16 +4,7 @@
       <slot name="title" />
     </h2>
     <div class="albums">
-      <app-album />
-      <app-album />
-      <app-album />
-      <app-album />
-      <app-album />
-      <app-album />
-      <app-album />
-      <app-album />
-      <app-album />
-      <app-album />
+      <app-album v-for="(album, index) of albums.items" :key="index" :album="album" />
     </div>
   </div>
 </template>
@@ -21,6 +12,12 @@
 import Album from '~/components/Album'
 
 export default {
+  props: {
+    albums: {
+      type: Object,
+      default: { items: [] }
+    }
+  },
   components: {
     appAlbum: Album
   }
