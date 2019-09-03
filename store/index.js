@@ -11,10 +11,16 @@ export const getters = {
 export const mutations = {
   setAlbums: (state, albums) => {
     state.albums = albums
+  },
+  setToken: (state, token) => {
+    state.token = token
   }
 }
 
 export const actions = {
+  setToken({ commit }, token) {
+    commit('setToken', token)
+  },
   async search({ commit, getters }, query) {
     if (query) {
       const token = getters.token

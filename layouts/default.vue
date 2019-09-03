@@ -1,5 +1,6 @@
 <template>
   <div class="container-full">
+    <app-modal />
     <app-aside />
     <main class="main">
       <nuxt />
@@ -8,9 +9,11 @@
 </template>
 <script>
 import Aside from '~/components/Aside'
+import TokenModal from '~/components/TokenModal'
 export default {
   components: {
-    appAside: Aside
+    appAside: Aside,
+    appModal: TokenModal
   }
 }
 </script>

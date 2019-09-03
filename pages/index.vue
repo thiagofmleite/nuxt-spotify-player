@@ -37,6 +37,7 @@ export default {
         console.info('Searching for:', query)
         const results = await this.search(query)
       } catch (error) {
+        debugger
         console.error(error)
       } finally {
         this.isLoading = false
