@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <app-input @input="doSearch">Busque por artistas, álbuns ou músicas</app-input>
+      <app-search-input @input="doSearch">Busque por artistas, álbuns ou músicas</app-search-input>
     </section>
     <section>
       <app-albums :albums="albums">
@@ -13,12 +13,12 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import Input from '~/components/Input'
+import SearchInput from '~/components/SearchInput'
 import Albums from '~/components/Albums'
 
 export default {
   components: {
-    appInput: Input,
+    appSearchInput: SearchInput,
     appAlbums: Albums
   },
   computed: {

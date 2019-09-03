@@ -1,7 +1,6 @@
 export const state = () => ({
   albums: { items: [] },
-  token:
-    'BQA6XpoS8vKPay_cOJcflml7K09W_QKh35CcygpsiROa5roanX4TCVtIe-68LDmDKuAQGiwNz0kw_KR8gyRpGWgTT60lHBBYftLf2JHv6Gu2FqpVuDntPJQJ7Jkt1VKDJqP1EUdxnRfwplUnsQxRk0VZPQuH_YaB'
+  token: ''
 })
 
 export const getters = {
