@@ -1,9 +1,11 @@
 <template>
   <aside class="sidebar">
-    <div class="logo">
-      <div class="logo-fill"></div>
-      <img class="logo-img" src="~assets/images/spotify-logo.svg" alt="Spotify" />
-    </div>
+    <nuxt-link to="/">
+      <div class="logo">
+        <div class="logo-fill"></div>
+        <img class="logo-img" src="~assets/images/spotify-logo.svg" alt="Spotify" />
+      </div>
+    </nuxt-link>
   </aside>
 </template>
 <style lang="scss" scoped>

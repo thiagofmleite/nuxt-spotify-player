@@ -3,7 +3,7 @@
     <section>
       <app-search-input @input="doSearch">Busque por artistas, álbuns ou músicas</app-search-input>
     </section>
-    <section>
+    <section v-if="albums.items.length > 0">
       <app-albums :albums="albums">
         <template slot="title">Álbums buscados recentemente</template>
       </app-albums>

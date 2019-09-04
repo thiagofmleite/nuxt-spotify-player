@@ -3,7 +3,8 @@ export default async function({ route, error, app, store }) {
     const artistName = route.params.artist.replace(/-/g, ' ')
     const results = await store.dispatch('search/search', {
       query: artistName,
-      type: 'artist'
+      type: 'artist',
+      store: false
     })
 
     const artist = results.artists.items[0]

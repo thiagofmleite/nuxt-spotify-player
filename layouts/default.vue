@@ -4,7 +4,7 @@
     <app-aside />
     <main class="main">
       <nav class="back">
-        <nuxt-link class="text-style-medium" to="/">&lt; Voltar</nuxt-link>
+        <a class="text-style-medium" @click.prevent="$router.back()">&lt; Voltar</a>
       </nav>
       <nuxt />
     </main>
@@ -32,6 +32,7 @@ export default {
   .back {
     padding: 1em 0;
     a {
+      cursor: pointer;
       text-decoration: none;
       display: block;
     }

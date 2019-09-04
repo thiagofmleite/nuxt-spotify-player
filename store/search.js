@@ -18,7 +18,10 @@ export const mutations = {
 }
 
 export const actions = {
-  async search({ commit, rootGetters }, { query, type = 'album,artist' }) {
+  async search(
+    { commit, rootGetters },
+    { query, type = 'album,artist', store = true }
+  ) {
     if (query) {
       const token = rootGetters.token
       this.$axios.setToken(token, 'Bearer')
@@ -28,8 +31,10 @@ export const actions = {
           type
         }
       })
-      commit('setAlbums', results.albums)
-      commit('setArtists', results.artists)
+      if (store) {
+        commit('setAlbums', results.albums)
+        commit('setArtists', results.artists)
+      }
       return results
     } else {
       commit('setAlbums', { items: [] })
