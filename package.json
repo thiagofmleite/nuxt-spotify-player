@@ -26,6 +26,11 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "nuxt": "^2.9.2"
   },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
