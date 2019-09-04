@@ -3,9 +3,6 @@
     <app-modal />
     <app-aside />
     <main class="main">
-      <nav class="back">
-        <nuxt-link class="text-style-medium" to="/">&lt; Voltar</nuxt-link>
-      </nav>
       <nuxt />
     </main>
   </div>
@@ -29,12 +26,5 @@ export default {
   box-sizing: border-box;
   padding: 4em 1em 0;
   flex-grow: 2;
-  .back {
-    padding: 1em 0;
-    a {
-      text-decoration: none;
-      display: block;
-    }
-  }
 }
 </style>

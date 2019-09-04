@@ -17,28 +17,30 @@ import SearchInput from '~/components/SearchInput'
 import Albums from '~/components/Albums'
 
 export default {
+  layout: 'home',
   components: {
     appSearchInput: SearchInput,
     appAlbums: Albums
   },
   computed: {
     ...mapGetters({
-      albums: 'albums'
+      albums: 'search/albums'
     })
   },
   methods: {
     ...mapActions({
-      search: 'search'
+      search: 'search/search',
+      setToken: 'setToken'
     }),
     async doSearch(query) {
       try {
         this.query = query
         this.isLoading = true
         console.info('Searching for:', query)
-        const results = await this.search(query)
+        const results = await this.search({ query })
       } catch (error) {
-        debugger
-        console.error(error)
+        console.error(error.message)
+        this.setToken('')
       } finally {
         this.isLoading = false
       }

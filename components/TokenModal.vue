@@ -1,10 +1,10 @@
 <template>
   <div id="modal" class="modal" :class="activeClass">
     <div class="modal-content">
-      <form @submit.prevent="setToken(newToken)">
+      <form @submit.prevent="saveToken">
         <div class="form-field">
           <label>Informe um token</label>
-          <input type="text" v-model="newToken" />
+          <input type="text" v-model.trim="newToken" />
           <button type="submit">Enviar</button>
         </div>
       </form>
@@ -29,7 +29,11 @@ export default {
   methods: {
     ...mapActions({
       setToken: 'setToken'
-    })
+    }),
+    saveToken() {
+      this.setToken(this.newToken)
+      this.$router.push(this.$route.path + '?reload=true')
+    }
   },
   data() {
     return {
