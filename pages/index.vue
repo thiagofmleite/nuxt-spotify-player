@@ -24,12 +24,12 @@ export default {
   },
   computed: {
     ...mapGetters({
-      albums: 'search/albums'
+      albums: 'modules/search/albums'
     })
   },
   methods: {
     ...mapActions({
-      search: 'search/search',
+      search: 'modules/search/search',
       setToken: 'setToken'
     }),
     async doSearch(query) {

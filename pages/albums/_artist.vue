@@ -18,8 +18,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      albums: 'artists/albums',
-      artist: 'artists/artist'
+      albums: 'modules/artists/albums',
+      artist: 'modules/artists/artist'
     })
   }
 }
